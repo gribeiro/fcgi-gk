@@ -1,0 +1,4 @@
+*.o
+*.py
+*.swp
+eigen
