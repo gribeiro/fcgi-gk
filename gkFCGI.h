@@ -7,6 +7,8 @@
 
 class gkFCGI {
    public:
+    /*
+     * Let the class be a singleton*/
     static gkFCGI& getInstance() {
         static gkFCGI instance;
         return instance;
@@ -21,6 +23,7 @@ class gkFCGI {
     void streamCGI();
     void streamSTD();
     std::streambuf *cin_save, *cout_save, *cerr_save;
+    // Singleton class enabler. 
     gkFCGI(gkFCGI const&) = delete;
     void operator=(gkFCGI const&) = delete;
 };
